@@ -111200,7 +111200,7 @@ PrefabInstance:
     - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -140645,7 +140645,7 @@ PrefabInstance:
     - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -159617,6 +159617,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1244345823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1005508951, guid: 4f84cd36964775749a024e440ff91bef,
+    type: 3}
+  m_PrefabInstance: {fileID: 5912412348184219145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7686283b9a90d024f80d3949965c92d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1244802980
 Mesh:
   m_ObjectHideFlags: 0
@@ -161611,7 +161623,7 @@ PrefabInstance:
     - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -180490,6 +180502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AiAgent
       objectReference: {fileID: 0}
+    - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_RootOrder
@@ -180508,7 +180525,7 @@ PrefabInstance:
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -168
+      value: -132.1
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -253292,7 +253309,7 @@ PrefabInstance:
     - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -253516,7 +253533,7 @@ PrefabInstance:
     - target: {fileID: 2690162990217472633, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3323287432981442755, guid: 8556eb24e09303247a3503f582b0e45d,
         type: 3}
@@ -282990,6 +283007,7 @@ GameObject:
   - component: {fileID: 5733730921807520542}
   - component: {fileID: 5733730921807520537}
   - component: {fileID: 7694168077384690040}
+  - component: {fileID: 7694168077384690041}
   - component: {fileID: 5733730921807520534}
   m_Layer: 0
   m_Name: Bot
@@ -283011,8 +283029,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialState: 0
-  PlayerTransform: {fileID: 1005508914}
+  InitialStateAggression: 2
+  PlayerTransform: {fileID: 1244345823}
   BotNavMesh: {fileID: 0}
+  CheckingNearShotsBot: {fileID: 0}
+--- !u!114 &7694168077384690041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694168077384690039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7259b818632aa04f80917c897665455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 10
+  LayerBullet:
+    serializedVersion: 2
+    m_Bits: 4096
+  Shoting: 0
 --- !u!1001 &7721124961603890480
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,15 +13,15 @@ public class IdleState : IState
 
     public void UpdateState(Bot bot)
     {
-        Vector3 directionToPlayer = bot.PlayerTransform.position - bot.transform.position;
+        Vector3 directionToPlayer = bot.PlayerTransform.transform.position - bot.transform.position;
 
         Vector3 botDirection = bot.transform.forward;
         directionToPlayer.Normalize();
 
         float dotProduct = Vector3.Dot(directionToPlayer, botDirection);
-        if (dotProduct > 0.0f)
+        if (dotProduct > 0.0f && bot.StateMachineAggressiveBot.CurrentStateAggression != StateAggressionEnum.Aggressive)
         {
-            bot.BotStateMachine.ChangeState(StateEnum.ChasePlayer);
+            bot.StateMachineBot.ChangeState(StateEnum.ChasePlayer);
         }
     }
 

@@ -22,6 +22,8 @@ public class ActiveWeapon : MonoBehaviour
     int activeWeaponIndex = -1;
     bool isHolstered = false;
 
+    public event Action WeaponShotEvent;
+
     private void Awake() {
         crossHairTarget = Camera.main.transform.Find("CrossHairTarget");
         ammoWidget = FindObjectOfType<AmmoWidget>();
@@ -66,6 +68,7 @@ public class ActiveWeapon : MonoBehaviour
         if (weapon) {
             if (Input.GetButton("Fire1") && canFire && !weapon.isFiring) {
                 weapon.StartFiring();
+                WeaponShotEvent?.Invoke();
             }
 
             if (Input.GetButtonUp("Fire1") || !canFire) {
